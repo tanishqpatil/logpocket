@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Go
+/logpocket
+/dist/
+coverage.out
+coverage.html
+
+# Frontend
+web/node_modules/
+web/dist/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+/data/
+
+# Temporary files
+/tmp/
+*.log
