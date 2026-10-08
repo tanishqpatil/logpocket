@@ -1,16 +1,16 @@
 # LogPocket — Architecture
 
-> **Status:** Proposed architecture / implementation blueprint  
-> **Date:** 2026-10-08  
-> **Target:** v0.1.0 public MVP; later features are labeled explicitly  
-> **License proposed:** Apache-2.0  
+> **Status:** Proposed architecture / implementation blueprint
+> **Date:** 2026-10-08
+> **Target:** v0.1.0 public MVP; later features are labeled explicitly
+> **License proposed:** Apache-2.0
 > **Related documents:** [`DEVELOPMENT_PLAN.md`](DEVELOPMENT_PLAN.md), [`IMPLEMENTATION_GUIDE.md`](IMPLEMENTATION_GUIDE.md)
 
 ## 1. Executive summary
 
 LogPocket is a small, self-hosted, local-first log explorer for developers and home-lab operators who want **historical logs + live tail + useful search** without installing an observability stack. One binary or Docker image hosts the collector, processing pipeline, embedded SQLite database, search endpoints, Server-Sent Events (SSE), and static browser UI. The initial scope is **single-host Docker log collection**. The architecture leaves well-defined seams for file, syslog, HTTP, journald, and remote agents, but those must **not** block v0.1.
 
-**Product promise:** "Start one app, discover your Docker services, see live and historical logs, search them, and understand failures."  
+**Product promise:** "Start one app, discover your Docker services, see live and historical logs, search them, and understand failures."
 **Not a product promise:** distributed APM, tracing, production SOC logging, guaranteed lossless audit retention, or large-scale observability.
 
 ### 1.1 Users and primary workflows

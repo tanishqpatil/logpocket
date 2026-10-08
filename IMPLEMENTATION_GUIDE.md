@@ -1,7 +1,7 @@
 # LogPocket — Practical Implementation Guide
 
-> Companion to [architecture.md](architecture.md) and [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md)  
-> Status: development guidance, **not implemented code**  
+> Companion to [architecture.md](architecture.md) and [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md)
+> Status: development guidance, **not implemented code**
 > Scope: single-host, local-first Docker log explorer, v0.1.0
 
 This guide turns the architecture into a sequence of small implementation changes. The goal is to build a **working vertical slice early**, keep public GitHub commits meaningful, and learn Go, SQLite, Docker internals, and Svelte by solving actual engineering problems.
@@ -160,7 +160,7 @@ Input may be plain text, JSON, invalid JSON, malformed UTF-8, unusually large pa
 
 Recognize common JSON severity keys/aliases. `stderr` alone must not turn a log into `ERROR`; an unknown severity stays `UNKNOWN`. Keep one physical line per row in v0.1; multiline joining comes later.
 
-### E3. Memory and backpressure (**important**) 
+### E3. Memory and backpressure (**important**)
 
 A fixed record count alone is **not** a sufficient memory bound: 10,000 records × 256 KiB could consume approximately 2.44 GiB for a **single** saturated queue. Cap **both record count and aggregate queued payload bytes**. Initial conservative targets to benchmark:
 

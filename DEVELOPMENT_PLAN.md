@@ -1,9 +1,9 @@
 # LogPocket — Detailed Development Plan
 
-> **Status:** Planning, no application code implemented by these documents  
-> **Date:** 2026-10-08  
-> **Architecture:** [`architecture.md`](architecture.md)  
-> **Implementation companion:** [`IMPLEMENTATION_GUIDE.md`](IMPLEMENTATION_GUIDE.md)  
+> **Status:** Planning, no application code implemented by these documents
+> **Date:** 2026-10-08
+> **Architecture:** [`architecture.md`](architecture.md)
+> **Implementation companion:** [`IMPLEMENTATION_GUIDE.md`](IMPLEMENTATION_GUIDE.md)
 > **First release goal:** publicly usable v0.1.0, locally scoped single-host Docker logs
 
 ## 1. Approach and schedule
